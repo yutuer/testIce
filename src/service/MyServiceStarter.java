@@ -1,5 +1,7 @@
 package service;
 
+import Ice.ObjectPrx;
+
 public class MyServiceStarter {
 
 	public static void main(String[] args) {
@@ -7,9 +9,10 @@ public class MyServiceStarter {
 		Ice.Communicator ic = null;
 		try {
 			ic = Ice.Util.initialize(args);
-			Ice.ObjectAdapter adapter = ic.createObjectAdapterWithEndpoints("MyServiceAdapter", "default -p 10001");
+			Ice.ObjectAdapter adapter = ic.createObjectAdapterWithEndpoints("MyServiceAdapter", "default -p 10002");
 			MyServiceImpl servant = new MyServiceImpl();
-			adapter.add(servant, Ice.Util.stringToIdentity("MyService"));
+			ObjectPrx objectPrx = adapter.add(servant, Ice.Util.stringToIdentity("MyService"));
+			System.out.println(objectPrx.getClass().getName());
 			adapter.activate();
 			System.out.println("server started");
 			ic.waitForShutdown();

@@ -10,6 +10,7 @@ public class MyServiceImpl extends _MyserviceDisp{
 
 	@Override
 	public String hellow(Current __current) {
+//		throw new RuntimeException();
 		return "Hello world";
 	}
 
