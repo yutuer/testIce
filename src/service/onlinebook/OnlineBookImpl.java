@@ -18,6 +18,7 @@ public class OnlineBookImpl extends _OnlineBookDisp implements Service{
 	public Message bookTick(Message msg, Current __current) {
 //		throw new RuntimeException();
 		System.out.println("bookTick call:" + msg.content);
+		msg.content = "cccc";
 		return msg;
 	}
 

@@ -12,7 +12,7 @@ public class MyOnlineBookClient {
 
 		try {
 			ic = Ice.Util.initialize();
-			Ice.ObjectPrx base = ic.stringToProxy("OnlineBook:default -p 10000");
+			Ice.ObjectPrx base = ic.stringToProxy("OnlineBook:default -p 10001");
 			OnlineBookPrx proxy = OnlineBookPrxHelper.checkedCast(base);
 			if (proxy != null) {
 				Message msg = new Message();
@@ -21,9 +21,12 @@ public class MyOnlineBookClient {
 				msg.price = 9.99;
 				msg.valid = true;
 				msg.content = "aaaa";
+				System.out.println(msg);
 				
 				Message ret = proxy.bookTick(msg);
+				
 				System.out.println(ret);
+				System.out.println(ret.content);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
