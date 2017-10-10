@@ -12,18 +12,18 @@ public class MyOnlineBookClient {
 
 		try {
 			ic = Ice.Util.initialize();
-			Ice.ObjectPrx base = ic.stringToProxy("OnlineBook:default -p 10001");
+			Ice.ObjectPrx base = ic.stringToProxy("OnlineBook:default -p 20001");
 			OnlineBookPrx proxy = OnlineBookPrxHelper.checkedCast(base);
 			if (proxy != null) {
-				Message msg = new Message();
-				msg.name = "Mr Wang";
-				msg.type = 3;
-				msg.price = 9.99;
-				msg.valid = true;
-				msg.content = "aaaa";
-				System.out.println(msg);
+				Message bookMsg = new Message();
+				bookMsg.name = "Mr Wang";
+				bookMsg.type = 3;
+				bookMsg.price = 9.99;
+				bookMsg.valid = true;
+				bookMsg.content = "aaaa";
+				System.out.println(bookMsg);
 				
-				Message ret = proxy.bookTick(msg);
+				Message ret = proxy.bookTick(bookMsg);
 				
 				System.out.println(ret);
 				System.out.println(ret.content);
