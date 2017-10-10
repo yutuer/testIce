@@ -7,3 +7,4 @@ src/main/java/parseExcel/enums/
 .idea/
 bin/
 generated/
+registry/
