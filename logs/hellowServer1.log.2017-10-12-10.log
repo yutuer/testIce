@@ -1,0 +1,4 @@
+2017-10-12 10:34:51,242  INFO [main] (SMSServiceImpl.java:56) - SMSService stoped
+2017-10-12 10:34:51,290  INFO [main] (OnlineBookImpl.java:39) - OnlineBook stoped
+2017-10-12 10:38:17,705  INFO [main] (OnlineBookImpl.java:30) - service name is:OnlineBook
+2017-10-12 10:38:17,792  INFO [main] (OnlineBookImpl.java:35) - OnlineBook started

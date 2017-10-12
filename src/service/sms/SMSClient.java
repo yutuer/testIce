@@ -11,8 +11,10 @@ public class SMSClient {
 		Ice.Communicator ic = null;
 		
 		try {
-			ic = Ice.Util.initialize();
-			ObjectPrx stringToProxy = ic.stringToProxy("SMSService:default -p 20002");
+			String[] params = new String[]{"--Ice.Default.Locator=IceGrid/Locator:tcp -h localhost -p 4061"};
+			ic = Ice.Util.initialize(params);
+			
+			ObjectPrx stringToProxy = ic.stringToProxy("SMSService");
 			SMSServicePrx smsServicePrx = SMSServicePrxHelper.checkedCast(stringToProxy);
 			smsServicePrx.sendSMS("book aaa");
 		} catch (Exception e) {

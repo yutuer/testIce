@@ -1,0 +1,33 @@
+2017-10-12 11:00:00,447  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:24) - adapter called at endpoint tcp -p 57667 times 240
+2017-10-12 11:00:01,451  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:24) - adapter called at endpoint tcp -p 57667 times 241
+2017-10-12 11:00:02,453  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:24) - adapter called at endpoint tcp -p 57667 times 242
+2017-10-12 11:00:03,454  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:24) - adapter called at endpoint tcp -p 57667 times 243
+2017-10-12 11:00:04,456  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:24) - adapter called at endpoint tcp -p 57667 times 244
+2017-10-12 11:00:05,458  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:24) - adapter called at endpoint tcp -p 57667 times 245
+2017-10-12 11:00:06,460  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:24) - adapter called at endpoint tcp -p 57667 times 246
+2017-10-12 11:00:07,462  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:24) - adapter called at endpoint tcp -p 57667 times 247
+2017-10-12 11:00:08,464  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:24) - adapter called at endpoint tcp -p 57667 times 248
+2017-10-12 11:00:09,467  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:24) - adapter called at endpoint tcp -p 57667 times 249
+2017-10-12 11:00:10,469  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:24) - adapter called at endpoint tcp -p 57667 times 250
+2017-10-12 11:00:11,470  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:24) - adapter called at endpoint tcp -p 57667 times 251
+2017-10-12 11:00:12,472  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:24) - adapter called at endpoint tcp -p 57667 times 252
+2017-10-12 11:00:13,480  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:24) - adapter called at endpoint tcp -p 57667 times 253
+2017-10-12 11:00:14,482  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:24) - adapter called at endpoint tcp -p 57667 times 254
+2017-10-12 11:00:15,484  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:24) - adapter called at endpoint tcp -p 57667 times 255
+2017-10-12 11:00:16,486  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:24) - adapter called at endpoint tcp -p 57667 times 256
+2017-10-12 11:00:17,488  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:24) - adapter called at endpoint tcp -p 57667 times 257
+2017-10-12 11:00:18,489  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:24) - adapter called at endpoint tcp -p 57667 times 258
+2017-10-12 11:00:19,490  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:24) - adapter called at endpoint tcp -p 57667 times 259
+2017-10-12 11:00:20,492  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:24) - adapter called at endpoint tcp -p 57667 times 260
+2017-10-12 11:00:21,494  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:24) - adapter called at endpoint tcp -p 57667 times 261
+2017-10-12 11:00:22,495  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:24) - adapter called at endpoint tcp -p 57667 times 262
+2017-10-12 11:00:23,496  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:24) - adapter called at endpoint tcp -p 57667 times 263
+2017-10-12 11:29:13,059  INFO [main] (OnlineBookImpl.java:40) - OnlineBook stoped
+2017-10-12 11:32:07,916  INFO [main] (OnlineBookImpl.java:30) - service name is:OnlineBook
+2017-10-12 11:32:07,992  INFO [main] (OnlineBookImpl.java:35) - OnlineBook started
+2017-10-12 11:32:23,778  INFO [main] (OnlineBookImpl.java:40) - OnlineBook stoped
+2017-10-12 11:54:29,367  INFO [main] (OnlineBookImpl.java:30) - service name is:OnlineBook
+2017-10-12 11:54:29,440  INFO [main] (OnlineBookImpl.java:35) - OnlineBook started
+2017-10-12 11:57:44,040  INFO [main] (OnlineBookImpl.java:40) - OnlineBook stoped
+2017-10-12 11:58:25,546  INFO [main] (OnlineBookImpl.java:30) - service name is:OnlineBook
+2017-10-12 11:58:25,642  INFO [main] (OnlineBookImpl.java:35) - OnlineBook started

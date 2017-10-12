@@ -1,0 +1,764 @@
+-- 17-10-11 14:38:46:428 HellowServer2: ThreadPool: creating Ice.ThreadPool.Client: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 14:38:46:430 HellowServer1: ThreadPool: creating Ice.ThreadPool.Client: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 14:38:46:793 HellowServer2: Network: listening for tcp connections at 127.0.0.1:61486
+-- 17-10-11 14:38:46:801 HellowServer2: ThreadPool: creating Ice.ThreadPool.Server: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 14:38:46:801 HellowServer2: Network: published endpoints for object adapter `Ice.Admin':
+   tcp -h localhost -p 61486
+-- 17-10-11 14:38:46:802 HellowServer2: Network: accepting tcp connections at 127.0.0.1:61486
+-- 17-10-11 14:38:46:804 HellowServer1: Network: listening for tcp connections at 127.0.0.1:61494
+-- 17-10-11 14:38:46:806 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:61496
+   remote address = 127.0.0.1:4061
+-- 17-10-11 14:38:46:811 HellowServer2: Network: tcp connection established
+   local address = 172.16.2.98:61498
+   remote address = 172.16.2.98:53105
+-- 17-10-11 14:38:46:818 HellowServer1: ThreadPool: creating Ice.ThreadPool.Server: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 14:38:46:819 HellowServer1: Network: published endpoints for object adapter `Ice.Admin':
+   tcp -h localhost -p 61494
+-- 17-10-11 14:38:46:819 HellowServer2: Locator: registered server `HellowServer2' with the locator registry
+-- 17-10-11 14:38:46:819 HellowServer1: Network: accepting tcp connections at 127.0.0.1:61494
+-- 17-10-11 14:38:46:822 HellowServer1: Network: tcp connection established
+   local address = 127.0.0.1:61501
+   remote address = 127.0.0.1:4061
+-- 17-10-11 14:38:46:824 HellowServer1: Network: tcp connection established
+   local address = 172.16.2.98:61502
+   remote address = 172.16.2.98:53105
+-- 17-10-11 14:38:46:827 HellowServer1: Locator: registered server `HellowServer1' with the locator registry
+-! 17-10-11 14:38:50:864 HellowServer2-SMSService: warning: HellowServer2-SMSService-Ice.ThreadPool.Server-0: dispatch exception:
+   identity: SMSService
+   facet: 
+   operation: sendSMS
+   remote host: 172.16.2.98 remote port: 61493
+   java.lang.RuntimeException: Ice.ConnectionRefusedException
+       error = 0
+   	at service.sms.SMSServiceImpl.sendSMS(SMSServiceImpl.java:39)
+   	at com.hp.tel.ice.message._SMSServiceDisp.___sendSMS(_SMSServiceDisp.java:85)
+   	at com.hp.tel.ice.message._SMSServiceDisp.__dispatch(_SMSServiceDisp.java:127)
+   	at IceInternal.Incoming.invoke(Incoming.java:222)
+   	at Ice.ConnectionI.invokeAll(ConnectionI.java:2482)
+   	at Ice.ConnectionI.dispatch(ConnectionI.java:1258)
+   	at Ice.ConnectionI.message(ConnectionI.java:1213)
+   	at IceInternal.ThreadPool.run(ThreadPool.java:321)
+   	at IceInternal.ThreadPool.access$300(ThreadPool.java:12)
+   	at IceInternal.ThreadPool$EventHandlerThread.run(ThreadPool.java:693)
+   	at java.lang.Thread.run(Unknown Source)
+   Caused by: Ice.ConnectionRefusedException
+       error = 0
+   	at IceInternal.ConnectRequestHandler.getConnection(ConnectRequestHandler.java:244)
+   	at IceInternal.ConnectRequestHandler.sendRequest(ConnectRequestHandler.java:141)
+   	at IceInternal.Outgoing.invoke(Outgoing.java:77)
+   	at Ice._ObjectDelM.ice_isA(_ObjectDelM.java:33)
+   	at Ice.ObjectPrxHelperBase.ice_isA(ObjectPrxHelperBase.java:98)
+   	at Ice.ObjectPrxHelperBase.ice_isA(ObjectPrxHelperBase.java:61)
+   	at com.hp.tel.ice.book.OnlineBookPrxHelper.checkedCast(OnlineBookPrxHelper.java:171)
+   	at service.sms.SMSServiceImpl.sendSMS(SMSServiceImpl.java:27)
+   	... 10 more
+   Caused by: java.net.ConnectException: Connection refused: no further information
+   	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+   	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source)
+   	at IceInternal.Network.doFinishConnect(Network.java:367)
+   	at IceInternal.TcpTransceiver.initialize(TcpTransceiver.java:33)
+   	at Ice.ConnectionI.initialize(ConnectionI.java:1933)
+   	at Ice.ConnectionI.message(ConnectionI.java:1084)
+   	... 4 more
+   
+-- 17-10-11 14:39:20:596 HellowServer2: Network: closing tcp connection
+   local address = 172.16.2.98:61498
+   remote address = 172.16.2.98:53105
+-- 17-10-11 14:39:20:597 HellowServer1: Network: closing tcp connection
+   local address = 172.16.2.98:61502
+   remote address = 172.16.2.98:53105
+-- 17-10-11 14:39:50:602 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:61496
+   remote address = 127.0.0.1:4061
+-- 17-10-11 14:39:50:604 HellowServer1: Network: closing tcp connection
+   local address = 127.0.0.1:61501
+   remote address = 127.0.0.1:4061
+-! 17-10-11 14:44:49:031 HellowServer1-SMSService: warning: HellowServer1-SMSService-Ice.ThreadPool.Server-0: dispatch exception:
+   identity: SMSService
+   facet: 
+   operation: sendSMS
+   remote host: 172.16.2.98 remote port: 61552
+   java.lang.RuntimeException: Ice.ConnectionRefusedException
+       error = 0
+   	at service.sms.SMSServiceImpl.sendSMS(SMSServiceImpl.java:39)
+   	at com.hp.tel.ice.message._SMSServiceDisp.___sendSMS(_SMSServiceDisp.java:85)
+   	at com.hp.tel.ice.message._SMSServiceDisp.__dispatch(_SMSServiceDisp.java:127)
+   	at IceInternal.Incoming.invoke(Incoming.java:222)
+   	at Ice.ConnectionI.invokeAll(ConnectionI.java:2482)
+   	at Ice.ConnectionI.dispatch(ConnectionI.java:1258)
+   	at Ice.ConnectionI.message(ConnectionI.java:1213)
+   	at IceInternal.ThreadPool.run(ThreadPool.java:321)
+   	at IceInternal.ThreadPool.access$300(ThreadPool.java:12)
+   	at IceInternal.ThreadPool$EventHandlerThread.run(ThreadPool.java:693)
+   	at java.lang.Thread.run(Unknown Source)
+   Caused by: Ice.ConnectionRefusedException
+       error = 0
+   	at IceInternal.ConnectRequestHandler.getConnection(ConnectRequestHandler.java:244)
+   	at IceInternal.ConnectRequestHandler.sendRequest(ConnectRequestHandler.java:141)
+   	at IceInternal.Outgoing.invoke(Outgoing.java:77)
+   	at Ice._ObjectDelM.ice_isA(_ObjectDelM.java:33)
+   	at Ice.ObjectPrxHelperBase.ice_isA(ObjectPrxHelperBase.java:98)
+   	at Ice.ObjectPrxHelperBase.ice_isA(ObjectPrxHelperBase.java:61)
+   	at com.hp.tel.ice.book.OnlineBookPrxHelper.checkedCast(OnlineBookPrxHelper.java:171)
+   	at service.sms.SMSServiceImpl.sendSMS(SMSServiceImpl.java:27)
+   	... 10 more
+   Caused by: java.net.ConnectException: Connection refused: no further information
+   	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+   	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source)
+   	at IceInternal.Network.doFinishConnect(Network.java:367)
+   	at IceInternal.TcpTransceiver.initialize(TcpTransceiver.java:33)
+   	at Ice.ConnectionI.initialize(ConnectionI.java:1933)
+   	at Ice.ConnectionI.message(ConnectionI.java:1084)
+   	... 4 more
+   
+-- 17-10-11 14:56:31:597 HellowServer2: Network: accepted tcp connection
+   local address = 127.0.0.1:61486
+   remote address = 127.0.0.1:61619
+-- 17-10-11 14:56:31:598 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:61486
+   remote address = 127.0.0.1:61619
+-- 17-10-11 14:56:31:602 HellowServer2: Network: stopping to accept tcp connections at 127.0.0.1:61486
+-- 17-10-11 14:56:31:603 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:61486
+   remote address = 127.0.0.1:61619
+-- 17-10-11 14:57:14:464 HellowServer2: ThreadPool: creating Ice.ThreadPool.Client: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 14:57:14:684 HellowServer2: Network: listening for tcp connections at 127.0.0.1:61652
+-- 17-10-11 14:57:14:688 HellowServer2: ThreadPool: creating Ice.ThreadPool.Server: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 14:57:14:688 HellowServer2: Network: published endpoints for object adapter `Ice.Admin':
+   tcp -h localhost -p 61652
+-- 17-10-11 14:57:14:688 HellowServer2: Network: accepting tcp connections at 127.0.0.1:61652
+-- 17-10-11 14:57:14:691 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:61657
+   remote address = 127.0.0.1:4061
+-- 17-10-11 14:57:14:692 HellowServer2: Network: tcp connection established
+   local address = 172.16.2.98:61658
+   remote address = 172.16.2.98:53105
+-- 17-10-11 14:57:14:704 HellowServer2: Locator: registered server `HellowServer2' with the locator registry
+-- 17-10-11 14:57:45:633 HellowServer2: Network: closing tcp connection
+   local address = 172.16.2.98:61658
+   remote address = 172.16.2.98:53105
+-- 17-10-11 14:58:15:638 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:61657
+   remote address = 127.0.0.1:4061
+-- 17-10-11 15:03:48:872 HellowServer2: Network: accepted tcp connection
+   local address = 127.0.0.1:61652
+   remote address = 127.0.0.1:61862
+-- 17-10-11 15:03:48:873 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:61652
+   remote address = 127.0.0.1:61862
+-- 17-10-11 15:03:48:879 HellowServer2: Network: stopping to accept tcp connections at 127.0.0.1:61652
+-- 17-10-11 15:03:48:880 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:61652
+   remote address = 127.0.0.1:61862
+-- 17-10-11 15:04:02:812 HellowServer2: ThreadPool: creating Ice.ThreadPool.Client: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 15:04:03:094 HellowServer2: Network: listening for tcp connections at 127.0.0.1:61901
+-- 17-10-11 15:04:03:099 HellowServer2: ThreadPool: creating Ice.ThreadPool.Server: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 15:04:03:099 HellowServer2: Network: published endpoints for object adapter `Ice.Admin':
+   tcp -h localhost -p 61901
+-- 17-10-11 15:04:03:099 HellowServer2: Network: accepting tcp connections at 127.0.0.1:61901
+-- 17-10-11 15:04:03:101 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:61906
+   remote address = 127.0.0.1:4061
+-- 17-10-11 15:04:03:103 HellowServer2: Network: tcp connection established
+   local address = 172.16.2.98:61907
+   remote address = 172.16.2.98:53105
+-- 17-10-11 15:04:03:106 HellowServer2: Locator: registered server `HellowServer2' with the locator registry
+-- 17-10-11 15:04:35:647 HellowServer2: Network: closing tcp connection
+   local address = 172.16.2.98:61907
+   remote address = 172.16.2.98:53105
+-- 17-10-11 15:05:05:652 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:61906
+   remote address = 127.0.0.1:4061
+-- 17-10-11 15:05:26:404 HellowServer1: Network: accepted tcp connection
+   local address = 127.0.0.1:61494
+   remote address = 127.0.0.1:61918
+-- 17-10-11 15:05:26:404 HellowServer1: Network: tcp connection established
+   local address = 127.0.0.1:61494
+   remote address = 127.0.0.1:61918
+-- 17-10-11 15:05:26:411 HellowServer1: Network: stopping to accept tcp connections at 127.0.0.1:61494
+-- 17-10-11 15:05:26:412 HellowServer1: Network: closing tcp connection
+   local address = 127.0.0.1:61494
+   remote address = 127.0.0.1:61918
+-- 17-10-11 15:05:47:504 HellowServer2: Network: accepted tcp connection
+   local address = 127.0.0.1:61901
+   remote address = 127.0.0.1:61923
+-- 17-10-11 15:05:47:505 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:61901
+   remote address = 127.0.0.1:61923
+-- 17-10-11 15:05:47:509 HellowServer2: Network: stopping to accept tcp connections at 127.0.0.1:61901
+-- 17-10-11 15:05:47:510 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:61901
+   remote address = 127.0.0.1:61923
+-- 17-10-11 15:06:03:734 HellowServer2: ThreadPool: creating Ice.ThreadPool.Client: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 15:06:03:768 HellowServer1: ThreadPool: creating Ice.ThreadPool.Client: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 15:06:03:929 HellowServer2: Network: listening for tcp connections at 127.0.0.1:61977
+-- 17-10-11 15:06:03:934 HellowServer2: ThreadPool: creating Ice.ThreadPool.Server: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 15:06:03:934 HellowServer2: Network: published endpoints for object adapter `Ice.Admin':
+   tcp -h localhost -p 61977
+-- 17-10-11 15:06:03:934 HellowServer2: Network: accepting tcp connections at 127.0.0.1:61977
+-- 17-10-11 15:06:03:938 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:61988
+   remote address = 127.0.0.1:4061
+-- 17-10-11 15:06:03:939 HellowServer2: Network: tcp connection established
+   local address = 172.16.2.98:61989
+   remote address = 172.16.2.98:53105
+-- 17-10-11 15:06:03:943 HellowServer2: Locator: registered server `HellowServer2' with the locator registry
+-- 17-10-11 15:06:03:971 HellowServer1: Network: listening for tcp connections at 127.0.0.1:61992
+-- 17-10-11 15:06:03:975 HellowServer1: ThreadPool: creating Ice.ThreadPool.Server: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 15:06:03:975 HellowServer1: Network: published endpoints for object adapter `Ice.Admin':
+   tcp -h localhost -p 61992
+-- 17-10-11 15:06:03:976 HellowServer1: Network: accepting tcp connections at 127.0.0.1:61992
+-- 17-10-11 15:06:03:978 HellowServer1: Network: tcp connection established
+   local address = 127.0.0.1:61998
+   remote address = 127.0.0.1:4061
+-- 17-10-11 15:06:03:982 HellowServer1: Network: tcp connection established
+   local address = 172.16.2.98:61999
+   remote address = 172.16.2.98:53105
+-- 17-10-11 15:06:03:987 HellowServer1: Locator: registered server `HellowServer1' with the locator registry
+-- 17-10-11 15:06:34:883 HellowServer1: Network: accepted tcp connection
+   local address = 127.0.0.1:61992
+   remote address = 127.0.0.1:62003
+-- 17-10-11 15:06:34:884 HellowServer1: Network: tcp connection established
+   local address = 127.0.0.1:61992
+   remote address = 127.0.0.1:62003
+-- 17-10-11 15:06:34:899 HellowServer1: Network: stopping to accept tcp connections at 127.0.0.1:61992
+-- 17-10-11 15:06:34:900 HellowServer1: Network: closing tcp connection
+   local address = 127.0.0.1:61992
+   remote address = 127.0.0.1:62003
+-- 17-10-11 15:06:34:917 HellowServer1: Network: closing tcp connection
+   local address = 172.16.2.98:61999
+   remote address = 172.16.2.98:53105
+-- 17-10-11 15:06:34:918 HellowServer1: Network: closing tcp connection
+   local address = 127.0.0.1:61998
+   remote address = 127.0.0.1:4061
+-- 17-10-11 15:06:35:656 HellowServer2: Network: closing tcp connection
+   local address = 172.16.2.98:61989
+   remote address = 172.16.2.98:53105
+-- 17-10-11 15:06:36:830 HellowServer2: Network: accepted tcp connection
+   local address = 127.0.0.1:61977
+   remote address = 127.0.0.1:62005
+-- 17-10-11 15:06:36:830 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:61977
+   remote address = 127.0.0.1:62005
+-- 17-10-11 15:06:36:836 HellowServer2: Network: stopping to accept tcp connections at 127.0.0.1:61977
+-- 17-10-11 15:06:36:837 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:61977
+   remote address = 127.0.0.1:62005
+-- 17-10-11 15:06:36:876 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:61988
+   remote address = 127.0.0.1:4061
+-- 17-10-11 15:06:47:354 HellowServer2: ThreadPool: creating Ice.ThreadPool.Client: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 15:06:47:361 HellowServer1: ThreadPool: creating Ice.ThreadPool.Client: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 15:06:47:562 HellowServer2: Network: listening for tcp connections at 127.0.0.1:62069
+-- 17-10-11 15:06:47:562 HellowServer1: Network: listening for tcp connections at 127.0.0.1:62070
+-- 17-10-11 15:06:47:568 HellowServer2: ThreadPool: creating Ice.ThreadPool.Server: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 15:06:47:568 HellowServer2: Network: published endpoints for object adapter `Ice.Admin':
+   tcp -h localhost -p 62069
+-- 17-10-11 15:06:47:568 HellowServer2: Network: accepting tcp connections at 127.0.0.1:62069
+-- 17-10-11 15:06:47:569 HellowServer1: ThreadPool: creating Ice.ThreadPool.Server: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 15:06:47:570 HellowServer1: Network: published endpoints for object adapter `Ice.Admin':
+   tcp -h localhost -p 62070
+-- 17-10-11 15:06:47:570 HellowServer1: Network: accepting tcp connections at 127.0.0.1:62070
+-- 17-10-11 15:06:47:571 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:62081
+   remote address = 127.0.0.1:4061
+-- 17-10-11 15:06:47:574 HellowServer1: Network: tcp connection established
+   local address = 127.0.0.1:62082
+   remote address = 127.0.0.1:4061
+-- 17-10-11 15:06:47:574 HellowServer2: Network: tcp connection established
+   local address = 172.16.2.98:62083
+   remote address = 172.16.2.98:53105
+-- 17-10-11 15:06:47:577 HellowServer1: Network: tcp connection established
+   local address = 172.16.2.98:62085
+   remote address = 172.16.2.98:53105
+-- 17-10-11 15:06:47:580 HellowServer2: Locator: registered server `HellowServer2' with the locator registry
+-- 17-10-11 15:06:47:581 HellowServer1: Locator: registered server `HellowServer1' with the locator registry
+-- 17-10-11 15:07:20:657 HellowServer1: Network: closing tcp connection
+   local address = 172.16.2.98:62085
+   remote address = 172.16.2.98:53105
+-- 17-10-11 15:07:20:658 HellowServer2: Network: closing tcp connection
+   local address = 172.16.2.98:62083
+   remote address = 172.16.2.98:53105
+-- 17-10-11 15:07:50:660 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:62081
+   remote address = 127.0.0.1:4061
+-- 17-10-11 15:07:50:661 HellowServer1: Network: closing tcp connection
+   local address = 127.0.0.1:62082
+   remote address = 127.0.0.1:4061
+-- 17-10-11 15:08:49:254 HellowServer1: Network: accepted tcp connection
+   local address = 127.0.0.1:62070
+   remote address = 127.0.0.1:62104
+-- 17-10-11 15:08:49:254 HellowServer2: Network: accepted tcp connection
+   local address = 127.0.0.1:62069
+   remote address = 127.0.0.1:62103
+-- 17-10-11 15:08:49:254 HellowServer1: Network: tcp connection established
+   local address = 127.0.0.1:62070
+   remote address = 127.0.0.1:62104
+-- 17-10-11 15:08:49:254 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:62069
+   remote address = 127.0.0.1:62103
+-- 17-10-11 15:08:49:262 HellowServer1: Network: stopping to accept tcp connections at 127.0.0.1:62070
+-- 17-10-11 15:08:49:265 HellowServer2: Network: stopping to accept tcp connections at 127.0.0.1:62069
+-- 17-10-11 15:08:49:267 HellowServer1: Network: closing tcp connection
+   local address = 127.0.0.1:62070
+   remote address = 127.0.0.1:62104
+-- 17-10-11 15:08:49:269 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:62069
+   remote address = 127.0.0.1:62103
+-! 10/11/17 15:08:49.396 icegridnode: warning: removing server directory `G:\testEclipse\workspace\testIce/./node1/data/servers/HellowServer1' failed:
+   cannot remove directory `G:/testEclipse/workspace/testIce/node1/data/servers/HellowServer1':
+   目录不是空的。
+-! 10/11/17 15:08:49.405 icegridnode: warning: removing server directory `G:\testEclipse\workspace\testIce/./node1/data/servers/HellowServer2' failed:
+   cannot remove directory `G:/testEclipse/workspace/testIce/node1/data/servers/HellowServer2':
+   目录不是空的。
+-- 17-10-11 15:11:06:026 HellowServer2: ThreadPool: creating Ice.ThreadPool.Client: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 15:11:06:068 HellowServer1: ThreadPool: creating Ice.ThreadPool.Client: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 15:11:06:247 HellowServer2: Network: listening for tcp connections at 127.0.0.1:62179
+-- 17-10-11 15:11:06:252 HellowServer2: ThreadPool: creating Ice.ThreadPool.Server: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 15:11:06:253 HellowServer2: Network: published endpoints for object adapter `Ice.Admin':
+   tcp -h localhost -p 62179
+-- 17-10-11 15:11:06:253 HellowServer2: Network: accepting tcp connections at 127.0.0.1:62179
+-- 17-10-11 15:11:06:257 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:62188
+   remote address = 127.0.0.1:4061
+-- 17-10-11 15:11:06:258 HellowServer2: Network: tcp connection established
+   local address = 172.16.2.98:62190
+   remote address = 172.16.2.98:53105
+-- 17-10-11 15:11:06:262 HellowServer2: Locator: registered server `HellowServer2' with the locator registry
+-- 17-10-11 15:11:06:297 HellowServer1: Network: listening for tcp connections at 127.0.0.1:62198
+-- 17-10-11 15:11:06:302 HellowServer1: ThreadPool: creating Ice.ThreadPool.Server: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 15:11:06:302 HellowServer1: Network: published endpoints for object adapter `Ice.Admin':
+   tcp -h localhost -p 62198
+-- 17-10-11 15:11:06:302 HellowServer1: Network: accepting tcp connections at 127.0.0.1:62198
+-- 17-10-11 15:11:06:305 HellowServer1: Network: tcp connection established
+   local address = 127.0.0.1:62204
+   remote address = 127.0.0.1:4061
+-- 17-10-11 15:11:06:308 HellowServer1: Network: tcp connection established
+   local address = 172.16.2.98:62205
+   remote address = 172.16.2.98:53105
+-- 17-10-11 15:11:06:310 HellowServer1: Locator: registered server `HellowServer1' with the locator registry
+-- 17-10-11 15:11:40:671 HellowServer1: Network: closing tcp connection
+   local address = 172.16.2.98:62205
+   remote address = 172.16.2.98:53105
+-- 17-10-11 15:11:40:673 HellowServer2: Network: closing tcp connection
+   local address = 172.16.2.98:62190
+   remote address = 172.16.2.98:53105
+-- 17-10-11 15:12:10:673 HellowServer1: Network: closing tcp connection
+   local address = 127.0.0.1:62204
+   remote address = 127.0.0.1:4061
+-- 17-10-11 15:12:10:676 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:62188
+   remote address = 127.0.0.1:4061
+-- 17-10-11 15:13:04:215 HellowServer1: Network: accepted tcp connection
+   local address = 127.0.0.1:62198
+   remote address = 127.0.0.1:62218
+-- 17-10-11 15:13:04:215 HellowServer1: Network: tcp connection established
+   local address = 127.0.0.1:62198
+   remote address = 127.0.0.1:62218
+-- 17-10-11 15:13:04:217 HellowServer2: Network: accepted tcp connection
+   local address = 127.0.0.1:62179
+   remote address = 127.0.0.1:62219
+-- 17-10-11 15:13:04:218 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:62179
+   remote address = 127.0.0.1:62219
+-- 17-10-11 15:13:04:223 HellowServer1: Network: stopping to accept tcp connections at 127.0.0.1:62198
+-- 17-10-11 15:13:04:227 HellowServer1: Network: closing tcp connection
+   local address = 127.0.0.1:62198
+   remote address = 127.0.0.1:62218
+-- 17-10-11 15:13:04:240 HellowServer2: Network: stopping to accept tcp connections at 127.0.0.1:62179
+-- 17-10-11 15:13:04:240 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:62179
+   remote address = 127.0.0.1:62219
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
+Unrecognized option: --Ice.Config=config.properties
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
+Unrecognized option: --Ice.Config=config.properties
+-- 17-10-11 16:55:06:054 HellowServer2: ThreadPool: creating Ice.ThreadPool.Client: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 16:55:06:060 HellowServer1: ThreadPool: creating Ice.ThreadPool.Client: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 16:55:06:504 HellowServer2: Network: listening for tcp connections at 127.0.0.1:63822
+-- 17-10-11 16:55:06:505 HellowServer1: Network: listening for tcp connections at 127.0.0.1:63825
+-- 17-10-11 16:55:06:516 HellowServer2: ThreadPool: creating Ice.ThreadPool.Server: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 16:55:06:516 HellowServer2: Network: published endpoints for object adapter `Ice.Admin':
+   tcp -h localhost -p 63822
+-- 17-10-11 16:55:06:516 HellowServer2: Network: accepting tcp connections at 127.0.0.1:63822
+-- 17-10-11 16:55:06:519 HellowServer1: ThreadPool: creating Ice.ThreadPool.Server: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 16:55:06:519 HellowServer1: Network: published endpoints for object adapter `Ice.Admin':
+   tcp -h localhost -p 63825
+-- 17-10-11 16:55:06:520 HellowServer1: Network: accepting tcp connections at 127.0.0.1:63825
+-- 17-10-11 16:55:06:523 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:63834
+   remote address = 127.0.0.1:4061
+-- 17-10-11 16:55:06:523 HellowServer1: Network: tcp connection established
+   local address = 127.0.0.1:63835
+   remote address = 127.0.0.1:4061
+-- 17-10-11 16:55:06:528 HellowServer2: Network: tcp connection established
+   local address = 172.16.2.98:63836
+   remote address = 172.16.2.98:53105
+-- 17-10-11 16:55:06:532 HellowServer1: Network: tcp connection established
+   local address = 172.16.2.98:63837
+   remote address = 172.16.2.98:53105
+-- 17-10-11 16:55:06:561 HellowServer2: Locator: registered server `HellowServer2' with the locator registry
+-- 17-10-11 16:55:06:581 HellowServer1: Locator: registered server `HellowServer1' with the locator registry
+-- 17-10-11 16:55:41:295 HellowServer2: Network: closing tcp connection
+   local address = 172.16.2.98:63836
+   remote address = 172.16.2.98:53105
+-- 17-10-11 16:55:41:296 HellowServer1: Network: closing tcp connection
+   local address = 172.16.2.98:63837
+   remote address = 172.16.2.98:53105
+-- 17-10-11 16:56:11:300 HellowServer1: Network: closing tcp connection
+   local address = 127.0.0.1:63835
+   remote address = 127.0.0.1:4061
+-- 17-10-11 16:56:11:312 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:63834
+   remote address = 127.0.0.1:4061
+-- 17-10-11 17:46:02:866 HellowServer1: Network: accepted tcp connection
+   local address = 127.0.0.1:63825
+   remote address = 127.0.0.1:64895
+-- 17-10-11 17:46:02:873 HellowServer2: Network: accepted tcp connection
+   local address = 127.0.0.1:63822
+   remote address = 127.0.0.1:64894
+-- 17-10-11 17:46:02:884 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:63822
+   remote address = 127.0.0.1:64894
+-- 17-10-11 17:46:02:884 HellowServer1: Network: tcp connection established
+   local address = 127.0.0.1:63825
+   remote address = 127.0.0.1:64895
+-- 17-10-11 17:46:02:893 HellowServer1: Network: stopping to accept tcp connections at 127.0.0.1:63825
+-- 17-10-11 17:46:02:899 HellowServer2: Network: stopping to accept tcp connections at 127.0.0.1:63822
+-- 17-10-11 17:46:02:905 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:63822
+   remote address = 127.0.0.1:64894
+-- 17-10-11 17:46:02:905 HellowServer1: Network: closing tcp connection
+   local address = 127.0.0.1:63825
+   remote address = 127.0.0.1:64895
+-- 17-10-11 17:47:28:107 HellowServer2: ThreadPool: creating Ice.ThreadPool.Client: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 17:47:28:113 HellowServer1: ThreadPool: creating Ice.ThreadPool.Client: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 17:47:28:507 HellowServer1: Network: listening for tcp connections at 127.0.0.1:64967
+-- 17-10-11 17:47:28:507 HellowServer2: Network: listening for tcp connections at 127.0.0.1:64965
+-- 17-10-11 17:47:28:540 HellowServer1: ThreadPool: creating Ice.ThreadPool.Server: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 17:47:28:540 HellowServer1: Network: published endpoints for object adapter `Ice.Admin':
+   tcp -h localhost -p 64967
+-- 17-10-11 17:47:28:540 HellowServer1: Network: accepting tcp connections at 127.0.0.1:64967
+-- 17-10-11 17:47:28:550 HellowServer1: Network: tcp connection established
+   local address = 127.0.0.1:64976
+   remote address = 127.0.0.1:4061
+-- 17-10-11 17:47:28:550 HellowServer2: ThreadPool: creating Ice.ThreadPool.Server: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 17:47:28:550 HellowServer2: Network: published endpoints for object adapter `Ice.Admin':
+   tcp -h localhost -p 64965
+-- 17-10-11 17:47:28:551 HellowServer2: Network: accepting tcp connections at 127.0.0.1:64965
+-- 17-10-11 17:47:28:556 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:64977
+   remote address = 127.0.0.1:4061
+-- 17-10-11 17:47:28:557 HellowServer1: Network: tcp connection established
+   local address = 172.16.2.98:64978
+   remote address = 172.16.2.98:53105
+-- 17-10-11 17:47:28:560 HellowServer2: Network: tcp connection established
+   local address = 172.16.2.98:64979
+   remote address = 172.16.2.98:53105
+-- 17-10-11 17:47:28:581 HellowServer1: Locator: registered server `HellowServer1' with the locator registry
+-- 17-10-11 17:47:28:600 HellowServer2: Locator: registered server `HellowServer2' with the locator registry
+-- 17-10-11 17:48:01:700 HellowServer1: Network: closing tcp connection
+   local address = 172.16.2.98:64978
+   remote address = 172.16.2.98:53105
+-- 17-10-11 17:48:01:701 HellowServer2: Network: closing tcp connection
+   local address = 172.16.2.98:64979
+   remote address = 172.16.2.98:53105
+-- 17-10-11 17:48:31:708 HellowServer1: Network: closing tcp connection
+   local address = 127.0.0.1:64976
+   remote address = 127.0.0.1:4061
+-- 17-10-11 17:48:31:711 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:64977
+   remote address = 127.0.0.1:4061
+-- 17-10-11 17:50:37:601 HellowServer1: Network: accepted tcp connection
+   local address = 127.0.0.1:64967
+   remote address = 127.0.0.1:65026
+-- 17-10-11 17:50:37:601 HellowServer1: Network: tcp connection established
+   local address = 127.0.0.1:64967
+   remote address = 127.0.0.1:65026
+-- 17-10-11 17:50:37:610 HellowServer2: Network: accepted tcp connection
+   local address = 127.0.0.1:64965
+   remote address = 127.0.0.1:65025
+-- 17-10-11 17:50:37:610 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:64965
+   remote address = 127.0.0.1:65025
+-- 17-10-11 17:50:37:621 HellowServer1: Network: stopping to accept tcp connections at 127.0.0.1:64967
+-- 17-10-11 17:50:37:637 HellowServer2: Network: stopping to accept tcp connections at 127.0.0.1:64965
+-- 17-10-11 17:50:37:646 HellowServer1: Network: closing tcp connection
+   local address = 127.0.0.1:64967
+   remote address = 127.0.0.1:65026
+-- 17-10-11 17:50:37:654 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:64965
+   remote address = 127.0.0.1:65025
+-- 17-10-11 17:52:07:200 HellowServer2: ThreadPool: creating Ice.ThreadPool.Client: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 17:52:07:215 HellowServer1: ThreadPool: creating Ice.ThreadPool.Client: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 17:52:07:599 HellowServer1: Network: listening for tcp connections at 127.0.0.1:65100
+-- 17-10-11 17:52:07:599 HellowServer2: Network: listening for tcp connections at 127.0.0.1:65102
+-- 17-10-11 17:52:07:614 HellowServer2: ThreadPool: creating Ice.ThreadPool.Server: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 17:52:07:618 HellowServer2: Network: published endpoints for object adapter `Ice.Admin':
+   tcp -h localhost -p 65102
+-- 17-10-11 17:52:07:618 HellowServer1: ThreadPool: creating Ice.ThreadPool.Server: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-11 17:52:07:618 HellowServer1: Network: published endpoints for object adapter `Ice.Admin':
+   tcp -h localhost -p 65100
+-- 17-10-11 17:52:07:618 HellowServer2: Network: accepting tcp connections at 127.0.0.1:65102
+-- 17-10-11 17:52:07:619 HellowServer1: Network: accepting tcp connections at 127.0.0.1:65100
+-- 17-10-11 17:52:07:629 HellowServer1: Network: tcp connection established
+   local address = 127.0.0.1:65112
+   remote address = 127.0.0.1:4061
+-- 17-10-11 17:52:07:629 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:65113
+   remote address = 127.0.0.1:4061
+-- 17-10-11 17:52:07:666 HellowServer2: Network: tcp connection established
+   local address = 172.16.2.98:65115
+   remote address = 172.16.2.98:53105
+-- 17-10-11 17:52:07:666 HellowServer1: Network: tcp connection established
+   local address = 172.16.2.98:65116
+   remote address = 172.16.2.98:53105
+-- 17-10-11 17:52:07:712 HellowServer2: Locator: registered server `HellowServer2' with the locator registry
+-- 17-10-11 17:52:07:712 HellowServer1: Locator: registered server `HellowServer1' with the locator registry
+-- 17-10-11 17:52:41:764 HellowServer2: Network: closing tcp connection
+   local address = 172.16.2.98:65115
+   remote address = 172.16.2.98:53105
+-- 17-10-11 17:52:41:766 HellowServer1: Network: closing tcp connection
+   local address = 172.16.2.98:65116
+   remote address = 172.16.2.98:53105
+-- 17-10-11 17:53:11:774 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:65113
+   remote address = 127.0.0.1:4061
+-- 17-10-11 17:53:11:787 HellowServer1: Network: closing tcp connection
+   local address = 127.0.0.1:65112
+   remote address = 127.0.0.1:4061
+-- 17-10-12 10:34:51:233 HellowServer1: Network: accepted tcp connection
+   local address = 127.0.0.1:65100
+   remote address = 127.0.0.1:57609
+-- 17-10-12 10:34:51:233 HellowServer1: Network: tcp connection established
+   local address = 127.0.0.1:65100
+   remote address = 127.0.0.1:57609
+-- 17-10-12 10:34:51:234 HellowServer2: Network: accepted tcp connection
+   local address = 127.0.0.1:65102
+   remote address = 127.0.0.1:57610
+-- 17-10-12 10:34:51:234 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:65102
+   remote address = 127.0.0.1:57610
+-- 17-10-12 10:34:51:238 HellowServer1: Network: stopping to accept tcp connections at 127.0.0.1:65100
+-- 17-10-12 10:34:51:239 HellowServer2: Network: stopping to accept tcp connections at 127.0.0.1:65102
+-- 17-10-12 10:34:51:241 HellowServer1: Network: closing tcp connection
+   local address = 127.0.0.1:65100
+   remote address = 127.0.0.1:57609
+-- 17-10-12 10:34:51:242 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:65102
+   remote address = 127.0.0.1:57610
+-- 17-10-12 10:38:17:610 HellowServer1: ThreadPool: creating Ice.ThreadPool.Client: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-12 10:38:17:611 HellowServer2: ThreadPool: creating Ice.ThreadPool.Client: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-12 10:38:17:785 HellowServer2: Network: listening for tcp connections at 127.0.0.1:57680
+-- 17-10-12 10:38:17:793 HellowServer2: ThreadPool: creating Ice.ThreadPool.Server: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-12 10:38:17:793 HellowServer2: Network: published endpoints for object adapter `Ice.Admin':
+   tcp -h localhost -p 57680
+-- 17-10-12 10:38:17:793 HellowServer2: Network: accepting tcp connections at 127.0.0.1:57680
+-- 17-10-12 10:38:17:796 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:57688
+   remote address = 127.0.0.1:4061
+-- 17-10-12 10:38:17:798 HellowServer1: Network: listening for tcp connections at 127.0.0.1:57687
+-- 17-10-12 10:38:17:799 HellowServer2: Network: tcp connection established
+   local address = 172.16.2.98:57690
+   remote address = 172.16.2.98:53105
+-- 17-10-12 10:38:17:803 HellowServer2: Locator: registered server `HellowServer2' with the locator registry
+-- 17-10-12 10:38:17:805 HellowServer1: ThreadPool: creating Ice.ThreadPool.Server: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-12 10:38:17:805 HellowServer1: Network: published endpoints for object adapter `Ice.Admin':
+   tcp -h localhost -p 57687
+-- 17-10-12 10:38:17:805 HellowServer1: Network: accepting tcp connections at 127.0.0.1:57687
+-- 17-10-12 10:38:17:808 HellowServer1: Network: tcp connection established
+   local address = 127.0.0.1:57694
+   remote address = 127.0.0.1:4061
+-- 17-10-12 10:38:17:810 HellowServer1: Network: tcp connection established
+   local address = 172.16.2.98:57695
+   remote address = 172.16.2.98:53105
+-- 17-10-12 10:38:17:815 HellowServer1: Locator: registered server `HellowServer1' with the locator registry
+-- 17-10-12 10:38:52:028 HellowServer2: Network: closing tcp connection
+   local address = 172.16.2.98:57690
+   remote address = 172.16.2.98:53105
+-- 17-10-12 10:38:52:029 HellowServer1: Network: closing tcp connection
+   local address = 172.16.2.98:57695
+   remote address = 172.16.2.98:53105
+-- 17-10-12 10:39:22:030 HellowServer1: Network: closing tcp connection
+   local address = 127.0.0.1:57694
+   remote address = 127.0.0.1:4061
+-- 17-10-12 10:39:22:030 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:57688
+   remote address = 127.0.0.1:4061
+-- 17-10-12 11:29:13:056 HellowServer2: Network: accepted tcp connection
+   local address = 127.0.0.1:57680
+   remote address = 127.0.0.1:58349
+-- 17-10-12 11:29:13:056 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:57680
+   remote address = 127.0.0.1:58349
+-- 17-10-12 11:29:13:057 HellowServer1: Network: accepted tcp connection
+   local address = 127.0.0.1:57687
+   remote address = 127.0.0.1:58350
+-- 17-10-12 11:29:13:057 HellowServer1: Network: tcp connection established
+   local address = 127.0.0.1:57687
+   remote address = 127.0.0.1:58350
+-- 17-10-12 11:29:13:058 HellowServer2: Network: stopping to accept tcp connections at 127.0.0.1:57680
+-- 17-10-12 11:29:13:059 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:57680
+   remote address = 127.0.0.1:58349
+-- 17-10-12 11:29:13:063 HellowServer1: Network: stopping to accept tcp connections at 127.0.0.1:57687
+-- 17-10-12 11:29:13:064 HellowServer1: Network: closing tcp connection
+   local address = 127.0.0.1:57687
+   remote address = 127.0.0.1:58350
+-- 17-10-12 11:32:07:803 HellowServer1: ThreadPool: creating Ice.ThreadPool.Client: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-12 11:32:07:831 HellowServer2: ThreadPool: creating Ice.ThreadPool.Client: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-12 11:32:07:975 HellowServer1: Network: listening for tcp connections at 127.0.0.1:58410
+-- 17-10-12 11:32:07:981 HellowServer1: ThreadPool: creating Ice.ThreadPool.Server: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-12 11:32:07:981 HellowServer1: Network: published endpoints for object adapter `Ice.Admin':
+   tcp -h localhost -p 58410
+-- 17-10-12 11:32:07:981 HellowServer1: Network: accepting tcp connections at 127.0.0.1:58410
+-- 17-10-12 11:32:07:985 HellowServer1: Network: tcp connection established
+   local address = 127.0.0.1:58415
+   remote address = 127.0.0.1:4061
+-- 17-10-12 11:32:07:986 HellowServer1: Network: tcp connection established
+   local address = 172.16.2.98:58416
+   remote address = 172.16.2.98:53105
+-- 17-10-12 11:32:07:991 HellowServer1: Locator: registered server `HellowServer1' with the locator registry
+-- 17-10-12 11:32:07:997 HellowServer2: Network: listening for tcp connections at 127.0.0.1:58419
+-- 17-10-12 11:32:08:003 HellowServer2: ThreadPool: creating Ice.ThreadPool.Server: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-12 11:32:08:003 HellowServer2: Network: published endpoints for object adapter `Ice.Admin':
+   tcp -h localhost -p 58419
+-- 17-10-12 11:32:08:003 HellowServer2: Network: accepting tcp connections at 127.0.0.1:58419
+-- 17-10-12 11:32:08:006 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:58424
+   remote address = 127.0.0.1:4061
+-- 17-10-12 11:32:08:007 HellowServer2: Network: tcp connection established
+   local address = 172.16.2.98:58425
+   remote address = 172.16.2.98:53105
+-- 17-10-12 11:32:08:010 HellowServer2: Locator: registered server `HellowServer2' with the locator registry
+-- 17-10-12 11:32:23:764 HellowServer1: Network: accepted tcp connection
+   local address = 127.0.0.1:58410
+   remote address = 127.0.0.1:58433
+-- 17-10-12 11:32:23:765 HellowServer1: Network: tcp connection established
+   local address = 127.0.0.1:58410
+   remote address = 127.0.0.1:58433
+-- 17-10-12 11:32:23:766 HellowServer2: Network: accepted tcp connection
+   local address = 127.0.0.1:58419
+   remote address = 127.0.0.1:58434
+-- 17-10-12 11:32:23:767 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:58419
+   remote address = 127.0.0.1:58434
+-- 17-10-12 11:32:23:771 HellowServer1: Network: stopping to accept tcp connections at 127.0.0.1:58410
+-- 17-10-12 11:32:23:773 HellowServer1: Network: closing tcp connection
+   local address = 127.0.0.1:58410
+   remote address = 127.0.0.1:58433
+-- 17-10-12 11:32:23:775 HellowServer2: Network: stopping to accept tcp connections at 127.0.0.1:58419
+-- 17-10-12 11:32:23:778 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:58419
+   remote address = 127.0.0.1:58434
+-- 17-10-12 11:32:23:816 HellowServer1: Network: closing tcp connection
+   local address = 172.16.2.98:58416
+   remote address = 172.16.2.98:53105
+-- 17-10-12 11:32:23:816 HellowServer1: Network: closing tcp connection
+   local address = 127.0.0.1:58415
+   remote address = 127.0.0.1:4061
+-- 17-10-12 11:32:23:849 HellowServer2: Network: closing tcp connection
+   local address = 172.16.2.98:58425
+   remote address = 172.16.2.98:53105
+-- 17-10-12 11:32:23:849 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:58424
+   remote address = 127.0.0.1:4061
+-- 17-10-12 11:54:29:262 HellowServer2: ThreadPool: creating Ice.ThreadPool.Client: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-12 11:54:29:263 HellowServer1: ThreadPool: creating Ice.ThreadPool.Client: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-12 11:54:29:424 HellowServer1: Network: listening for tcp connections at 127.0.0.1:58772
+-- 17-10-12 11:54:29:428 HellowServer1: ThreadPool: creating Ice.ThreadPool.Server: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-12 11:54:29:429 HellowServer1: Network: published endpoints for object adapter `Ice.Admin':
+   tcp -h localhost -p 58772
+-- 17-10-12 11:54:29:429 HellowServer1: Network: accepting tcp connections at 127.0.0.1:58772
+-- 17-10-12 11:54:29:432 HellowServer1: Network: tcp connection established
+   local address = 127.0.0.1:58777
+   remote address = 127.0.0.1:4061
+-- 17-10-12 11:54:29:434 HellowServer1: Network: tcp connection established
+   local address = 172.16.2.98:58778
+   remote address = 172.16.2.98:58675
+-- 17-10-12 11:54:29:437 HellowServer1: Locator: registered server `HellowServer1' with the locator registry
+-- 17-10-12 11:54:29:444 HellowServer2: Network: listening for tcp connections at 127.0.0.1:58781
+-- 17-10-12 11:54:29:450 HellowServer2: ThreadPool: creating Ice.ThreadPool.Server: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-12 11:54:29:450 HellowServer2: Network: published endpoints for object adapter `Ice.Admin':
+   tcp -h localhost -p 58781
+-- 17-10-12 11:54:29:451 HellowServer2: Network: accepting tcp connections at 127.0.0.1:58781
+-- 17-10-12 11:54:29:453 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:58786
+   remote address = 127.0.0.1:4061
+-- 17-10-12 11:54:29:455 HellowServer2: Network: tcp connection established
+   local address = 172.16.2.98:58789
+   remote address = 172.16.2.98:58675
+-- 17-10-12 11:54:29:457 HellowServer2: Locator: registered server `HellowServer2' with the locator registry
+-- 17-10-12 11:55:02:200 HellowServer1: Network: closing tcp connection
+   local address = 172.16.2.98:58778
+   remote address = 172.16.2.98:58675
+-- 17-10-12 11:55:02:202 HellowServer2: Network: closing tcp connection
+   local address = 172.16.2.98:58789
+   remote address = 172.16.2.98:58675
+-- 17-10-12 11:55:32:203 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:58786
+   remote address = 127.0.0.1:4061
+-- 17-10-12 11:55:32:221 HellowServer1: Network: closing tcp connection
+   local address = 127.0.0.1:58777
+   remote address = 127.0.0.1:4061
+-- 17-10-12 11:57:44:019 HellowServer1: Network: accepted tcp connection
+   local address = 127.0.0.1:58772
+   remote address = 127.0.0.1:58816
+-- 17-10-12 11:57:44:020 HellowServer1: Network: tcp connection established
+   local address = 127.0.0.1:58772
+   remote address = 127.0.0.1:58816
+-- 17-10-12 11:57:44:025 HellowServer2: Network: accepted tcp connection
+   local address = 127.0.0.1:58781
+   remote address = 127.0.0.1:58817
+-- 17-10-12 11:57:44:026 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:58781
+   remote address = 127.0.0.1:58817
+-- 17-10-12 11:57:44:027 HellowServer1: Network: stopping to accept tcp connections at 127.0.0.1:58772
+-- 17-10-12 11:57:44:032 HellowServer1: Network: closing tcp connection
+   local address = 127.0.0.1:58772
+   remote address = 127.0.0.1:58816
+-- 17-10-12 11:57:44:039 HellowServer2: Network: stopping to accept tcp connections at 127.0.0.1:58781
+-- 17-10-12 11:57:44:040 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:58781
+   remote address = 127.0.0.1:58817
+-- 17-10-12 11:58:25:431 HellowServer2: ThreadPool: creating Ice.ThreadPool.Client: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-12 11:58:25:441 HellowServer1: ThreadPool: creating Ice.ThreadPool.Client: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-12 11:58:25:628 HellowServer1: Network: listening for tcp connections at 127.0.0.1:58955
+-- 17-10-12 11:58:25:635 HellowServer1: ThreadPool: creating Ice.ThreadPool.Server: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-12 11:58:25:635 HellowServer1: Network: published endpoints for object adapter `Ice.Admin':
+   tcp -h localhost -p 58955
+-- 17-10-12 11:58:25:635 HellowServer1: Network: accepting tcp connections at 127.0.0.1:58955
+-- 17-10-12 11:58:25:638 HellowServer1: Network: tcp connection established
+   local address = 127.0.0.1:58961
+   remote address = 127.0.0.1:4061
+-- 17-10-12 11:58:25:646 HellowServer1: Network: tcp connection established
+   local address = 172.16.2.98:58962
+   remote address = 172.16.2.98:58675
+-- 17-10-12 11:58:25:649 HellowServer2: Network: listening for tcp connections at 127.0.0.1:58964
+-- 17-10-12 11:58:25:650 HellowServer1: Locator: registered server `HellowServer1' with the locator registry
+-- 17-10-12 11:58:25:654 HellowServer2: ThreadPool: creating Ice.ThreadPool.Server: Size = 1, SizeMax = 1, SizeWarn = 0
+-- 17-10-12 11:58:25:655 HellowServer2: Network: published endpoints for object adapter `Ice.Admin':
+   tcp -h localhost -p 58964
+-- 17-10-12 11:58:25:655 HellowServer2: Network: accepting tcp connections at 127.0.0.1:58964
+-- 17-10-12 11:58:25:657 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:58969
+   remote address = 127.0.0.1:4061
+-- 17-10-12 11:58:25:660 HellowServer2: Network: tcp connection established
+   local address = 172.16.2.98:58970
+   remote address = 172.16.2.98:58675
+-- 17-10-12 11:58:25:663 HellowServer2: Locator: registered server `HellowServer2' with the locator registry
+-- 17-10-12 11:58:57:211 HellowServer1: Network: closing tcp connection
+   local address = 172.16.2.98:58962
+   remote address = 172.16.2.98:58675
+-- 17-10-12 11:58:57:212 HellowServer2: Network: closing tcp connection
+   local address = 172.16.2.98:58970
+   remote address = 172.16.2.98:58675
+-- 17-10-12 11:59:27:216 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:58969
+   remote address = 127.0.0.1:4061
+-- 17-10-12 11:59:27:216 HellowServer1: Network: closing tcp connection
+   local address = 127.0.0.1:58961
+   remote address = 127.0.0.1:4061

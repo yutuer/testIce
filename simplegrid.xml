@@ -1,0 +1,68 @@
+<icegrid>
+	<application name="MyPowerIce2">
+		<properties id="MultiThreaded">
+			<property name="Ice.PrintStackTraces" value="1" />
+			<property name="Ice.Trace.Retry" value="2" />
+			<property name="Ice.Trace.Network" value="1" />
+			<property name="Ice.Trace.ThreadPool" value="1" />
+			<property name="Ice.Trace.Locator" value="1" />
+		</properties>
+		
+		<properties id="ThreadPool">
+			<property name="Ice.ThreadPool.Server.Size" value="10" />
+			<property name="Ice.ThreadPool.Server.SizeMax" value="20" />
+			<!-- 
+			<property name="Ice.ThreadPool.Server.Size" value="10" />
+			-->
+		</properties>
+		
+		<properties id="LoadBalance">
+			<property name="Ice.Default.LocatorCacheTimeout" value="300" />
+			<property name="Ice.BackgroundLocatorCacheUpdates" value="1" />
+			<property name="Ice.ACM.Client" value="60" />
+			<property name="Ice.ACM.Server" value="0" />
+		</properties>
+		
+		<server-template id="HelloServerTemp">
+			<parameter name="id"/>
+			<icebox id="HellowServer${id}" exe="java" activation="on-demand">
+				<properties>
+					<properties refid="MultiThreaded"/>
+					<properties refid="LoadBalance"/>
+					<!-- 
+					-->
+				</properties>
+				<!-- option must before IceBox command-->
+				<option>-Xmx512M</option>
+				<option>-DAppHome=node1/data</option>
+				<option>-DAppId=hellowServer${id}</option>
+				<option>IceBox.Server</option>
+				<env>CLASSPATH=lib/*;bin/</env>
+				<service name="OnlineBook" entry="service.onlinebook.OnlineBookImpl">
+					<adapter name="OnlineBook" id="OnlineBook${id}" endpoints="tcp" replica-group="OnlineBookRep">
+					</adapter>
+				</service>
+				<!-- 
+				<service name="SMSService" entry="service.sms.SMSServiceImpl">
+					<adapter name="SMSService" id="SMSService${id}" endpoints="tcp" replica-group="SMSServiceRep">
+					</adapter>
+				</service>
+				-->
+			</icebox>
+		</server-template>
+		<replica-group id="OnlineBookRep">
+			<load-balancing type="adaptive" n-replicas="0" />
+			<object identity="OnlineBook" type="::book::OnlineBook" />
+		</replica-group>
+		<!-- 
+		<replica-group id="SMSServiceRep">
+			<load-balancing type="round-robin" n-replicas="0" />
+			<object identity="SMSService" type="::message::SMSService" />
+		</replica-group>
+		-->
+		<node name="node1">
+			<server-instance template="HelloServerTemp" id="1" />
+			<server-instance template="HelloServerTemp" id="2" />
+		</node>
+	</application>
+</icegrid>

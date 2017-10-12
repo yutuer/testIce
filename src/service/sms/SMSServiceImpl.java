@@ -33,7 +33,8 @@ public class SMSServiceImpl extends _SMSServiceDisp implements Service{
 				bookMsg.valid = true;
 				bookMsg.content = "abcdefg";
 				
-				onlienBookPrx.bookTick(bookMsg);
+				Message bookRet = onlienBookPrx.bookTick(bookMsg);
+				logger.info("ret content:" + bookRet.content);
 			} catch (Exception e) {
 				throw new RuntimeException(e);
 			}

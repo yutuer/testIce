@@ -16,11 +16,12 @@ public class OnlineBookImpl extends _OnlineBookDisp implements Service{
 	private Logger logger = Logger.getLogger(OnlineBookImpl.class);
 	
 	private ObjectAdapter _adapter;
+	private volatile int callTimes;
 	
 	@Override
 	public Message bookTick(Message msg, Current __current) {
-		logger.info("bookTick call:" + msg.content);
-		msg.content = "cccc";
+		callTimes ++;
+		logger.info("adapter called at endpoint " + __current.con.getEndpoint() + " times " + (callTimes));
 		return msg;
 	}
 

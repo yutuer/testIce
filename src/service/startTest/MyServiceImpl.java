@@ -1,4 +1,4 @@
-package service;
+package service.startTest;
 
 import Ice.Current;
 

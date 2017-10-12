@@ -1,0 +1,7 @@
+# Configuration file (10/12/17 11:58:14.019)
+
+# Object adapter OnlineBook
+OnlineBook.Endpoints=tcp
+OnlineBook.AdapterId=OnlineBook2
+OnlineBook.ReplicaGroupId=OnlineBookRep
+Ice.Default.Locator=IceGrid/Locator:tcp -h localhost -p 4061
