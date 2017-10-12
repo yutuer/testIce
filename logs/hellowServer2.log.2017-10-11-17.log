@@ -1,5 +1,0 @@
-2017-10-11 17:52:07,288  INFO [main] (OnlineBookImpl.java:29) - service name is:OnlineBook
-2017-10-11 17:52:07,400  INFO [main] (OnlineBookImpl.java:34) - OnlineBook started
-2017-10-11 17:52:07,478  INFO [main] (SMSServiceImpl.java:46) - service name is:SMSService
-2017-10-11 17:52:07,690  INFO [HellowServer2-OnlineBook-Ice.ThreadPool.Server-0] (OnlineBookImpl.java:22) - bookTick call:abcdefg
-2017-10-11 17:52:07,699  INFO [HellowServer2-SMSService-Ice.ThreadPool.Server-0] (SMSServiceImpl.java:37) - ret content:cccc
