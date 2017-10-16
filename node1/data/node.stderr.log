@@ -762,3 +762,23 @@ Unrecognized option: --Ice.Config=config.properties
 -- 17-10-12 11:59:27:216 HellowServer1: Network: closing tcp connection
    local address = 127.0.0.1:58961
    remote address = 127.0.0.1:4061
+-- 17-10-12 20:11:11:314 HellowServer1: Network: accepted tcp connection
+   local address = 127.0.0.1:58955
+   remote address = 127.0.0.1:51235
+-- 17-10-12 20:11:11:314 HellowServer1: Network: tcp connection established
+   local address = 127.0.0.1:58955
+   remote address = 127.0.0.1:51235
+-- 17-10-12 20:11:11:315 HellowServer2: Network: accepted tcp connection
+   local address = 127.0.0.1:58964
+   remote address = 127.0.0.1:51236
+-- 17-10-12 20:11:11:315 HellowServer2: Network: tcp connection established
+   local address = 127.0.0.1:58964
+   remote address = 127.0.0.1:51236
+-- 17-10-12 20:11:11:320 HellowServer1: Network: stopping to accept tcp connections at 127.0.0.1:58955
+-- 17-10-12 20:11:11:321 HellowServer1: Network: closing tcp connection
+   local address = 127.0.0.1:58955
+   remote address = 127.0.0.1:51235
+-- 17-10-12 20:11:11:321 HellowServer2: Network: stopping to accept tcp connections at 127.0.0.1:58964
+-- 17-10-12 20:11:11:322 HellowServer2: Network: closing tcp connection
+   local address = 127.0.0.1:58964
+   remote address = 127.0.0.1:51236

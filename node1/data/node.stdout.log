@@ -415,3 +415,5 @@ SMSService started
 2017-10-12 11:58:25 623 [OnlineBookImpl.java:35] [main:92]-[INFO] OnlineBook started
 2017-10-12 11:58:25 642 [OnlineBookImpl.java:35] [main:96]-[INFO] OnlineBook started
 2017-10-12 11:58:25 655 [OnlineBookImpl.java:24] [HellowServer1-OnlineBook-Ice.ThreadPool.Server-0:124]-[INFO] adapter called at endpoint tcp -p 58942 times 1
+2017-10-12 20:11:11 322 [OnlineBookImpl.java:40] [main:29565791]-[INFO] OnlineBook stoped
+2017-10-12 20:11:11 322 [OnlineBookImpl.java:40] [main:29565776]-[INFO] OnlineBook stoped

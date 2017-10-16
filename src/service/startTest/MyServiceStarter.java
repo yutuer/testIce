@@ -12,6 +12,7 @@ public class MyServiceStarter {
 			Ice.ObjectAdapter adapter = ic.createObjectAdapterWithEndpoints("MyServiceAdapter", "default -p 10002");
 			MyServiceImpl servant = new MyServiceImpl();
 			ObjectPrx objectPrx = adapter.add(servant, Ice.Util.stringToIdentity("MyService"));
+			adapter.addServantLocator(new MyServantLocator(), "");
 			System.out.println(objectPrx.getClass().getName());
 			adapter.activate();
 			System.out.println("server started");

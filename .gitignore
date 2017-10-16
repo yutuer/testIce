@@ -8,3 +8,5 @@ src/main/java/parseExcel/enums/
 bin/
 generated/
 registry/
+logs/
+node1/
