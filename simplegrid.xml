@@ -43,11 +43,12 @@
 					</adapter>
 				</service>
 				<!-- 
+				-->
 				<service name="SMSService" entry="service.sms.SMSServiceImpl">
 					<adapter name="SMSService" id="SMSService${id}" endpoints="tcp" replica-group="SMSServiceRep">
 					</adapter>
 				</service>
-				-->
+				
 			</icebox>
 		</server-template>
 		<replica-group id="OnlineBookRep">
@@ -55,11 +56,12 @@
 			<object identity="OnlineBook" type="::book::OnlineBook" />
 		</replica-group>
 		<!-- 
+		-->
 		<replica-group id="SMSServiceRep">
 			<load-balancing type="round-robin" n-replicas="0" />
 			<object identity="SMSService" type="::message::SMSService" />
 		</replica-group>
-		-->
+		
 		<node name="node1">
 			<server-instance template="HelloServerTemp" id="1" />
 			<server-instance template="HelloServerTemp" id="2" />
